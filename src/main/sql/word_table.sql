@@ -3,8 +3,10 @@ create table word (
     s2 varchar(255),
     attribute varchar(255),
     pronunciation varchar(255),
-    book_id int,
+    bookId int,
+    userId int,
     id int auto_increment,
-    foreign key (book_id) references book(id),
+    foreign key (bookId) references book(id),
+    foreign key (userId) references users(id),
     primary key (id)
 )

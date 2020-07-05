@@ -1,10 +1,12 @@
 package com.example.tango.Model;
 
+import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.Setter;
 
 @Getter
 @Setter
+@AllArgsConstructor
 public class Word {
     private String s1;
     private String s2;
@@ -13,5 +15,6 @@ public class Word {
     private String pronunciation;
 
     private int bookId;
+    private int userId;
     private int id;
 }

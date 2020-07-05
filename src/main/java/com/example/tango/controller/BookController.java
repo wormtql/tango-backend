@@ -9,6 +9,7 @@ import org.springframework.web.bind.annotation.*;
 
 @RestController
 @RequestMapping("/api/book")
+@CrossOrigin
 public class BookController {
     private BookService bookService;
 
@@ -52,8 +53,8 @@ public class BookController {
     }
 
     @GetMapping("/all")
-    public AllBooksResponse getAll(@RequestBody AllBooksRequest allBooksRequest) {
-        String token = allBooksRequest.getToken();
+    public AllBooksResponse getAll(@RequestParam String token) {
+//        String token = allBooksRequest.getToken();
 
         DecodedJWT decodedJWT = JwtUtils.verify(token);
         if (decodedJWT == null) {

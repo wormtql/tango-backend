@@ -6,13 +6,11 @@ import com.example.tango.dto.LoginResponse;
 import com.example.tango.dto.SignUpObject;
 import com.example.tango.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 @RestController
 @RequestMapping("/api/user")
+@CrossOrigin
 public class UserController {
     private UserService userService;
 

@@ -17,7 +17,7 @@ public class Book {
     // forks
     private int fork;
     // is public
-    private int is_public;
+    private int isPublic;
     // description
     private String description;
 }
